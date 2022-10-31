@@ -1,0 +1,27 @@
+ Follow the Below Steps to Install Jenkins in the VM:-
+
+?If Jenkins is not installed in your system, then type the following commands:
+
+sudo apt-get update
+sudo apt-get install openjdk-8-jre
+wget –q –O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add –
+sudo nano /etc/apt/sources.list
+
+? Scroll to the bottom of the sources. list file and add the following lines:
+
+         # Jenkins software repository
+         deb https://pkg.jenkins.io/debian binary
+
+Terminal:
+
+     sudo apt update
+             sudo apt install Jenkins
+             sudo systemctl status jenkins     
+             sudo ufw allow 8080
+             sudo ufw status   
+
+By default, Jenkins will run on port 8080. To start Jenkins type in the IP of your VPS and the port number 8080. It would look something like this in your browser – 120.0.0.1:8080.
+
+You will be asked to enter the administrator password.
+You can use the cat command to display the password:
+cat /var/lib/jenkins/secrets/initialAdminPassword
